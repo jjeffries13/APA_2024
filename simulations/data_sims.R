@@ -40,9 +40,11 @@ i9 ~ 1*1
 i10 ~ 1*1
 "
 
-# sim_output_10pm <- sim(nRep = 1000, model = analysis_model, n = 1000, 
-#                        generate = pop_model, lavaanfun = "cfa", generate = "lavaan",
-#                        seed = 13131, multicore = T, pmMCAR = 0.10)
+sim_output_10pm <- sim(nRep = 1000, model = analysis_model, n = 1000,
+                       generate = pop_model, lavaanfun = "cfa",
+                       seed = 13131, multicore = T, pmMCAR = 0.10)
+
+summary(sim_output_10pm)
 
 # 1000 .dat datasets with 10% missingness (sim_data_10i_10pm) ----
 
